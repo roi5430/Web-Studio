@@ -962,13 +962,18 @@ address {
 }
 
 .modal-title {
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 700;
   line-height: 1.15;
   letter-spacing: 0.03em;
   text-align: center;
   color: var(--title-color);
   margin-bottom: 12px;
+}
+@media screen and (min-width: 480px) {
+  .modal-title {
+    font-size: 20px;
+  }
 }
 
 .modal-input {

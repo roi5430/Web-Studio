@@ -70,10 +70,14 @@
 
 .modal-title {
     
-    @include font(20px, 700, 1.15, 0.03em);
+    @include font(17px, 700, 1.15, 0.03em);
     text-align: center;
     color: var(--title-color);
     margin-bottom: 12px;
+
+    @include mobile{
+        font-size: 20px;
+    }
 }
 
 .modal-input {
