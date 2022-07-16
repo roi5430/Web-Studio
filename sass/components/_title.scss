@@ -4,9 +4,10 @@
     @include font(28px, 700, 1.17, 0.03em);
     color: var(--title-color);
 
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 
     @include desktop { 
         font-size: 36px; 
+        margin-bottom: 50px;
     }
 }

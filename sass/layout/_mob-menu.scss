@@ -34,12 +34,16 @@
     }
 }
 
+.no-scroll {
+    overflow: hidden
+}
+
 .menu__conteiner {
     position: relative;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
 
 }
 
@@ -86,6 +90,7 @@
 .menu-social {
     display: flex;
     margin-top: 64px;
+    flex-wrap: wrap;
 }
 
 .menu-social__item {
@@ -104,11 +109,7 @@
 
 .menu-social__link {
     color: var(--accent-color);
-    @include font(14px, 500, 1.22, 00.02em);
-
-    @include mobile {
-        font-size: 18px;
-    }
+    @include font(18px, 500, 1.22, 00.02em);
 
     &:focus {
         color: #203064;

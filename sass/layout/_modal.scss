@@ -22,7 +22,7 @@
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
     transition: transform $timing-function;
-   
+    min-width: 100vw;
 
     background-color: var(--white-color);
     padding: 40px;
@@ -41,6 +41,9 @@
     }
 }
 
+ .no-scroll {
+     overflow: hidden
+ }
 
 .close {
     position: absolute;
@@ -154,7 +157,7 @@
         color: rgb(67, 94, 185);
     }
 }
-.check-text span {
+.check-text .span {
     border: 2px solid var(--title-color);
     height: 15px;
     width: 16px;
