@@ -1,0 +1,152 @@
+/*------------------ Footer------------------------- */
+.footer {
+    background-color: #2f303a;
+    padding: 60px 0;
+    text-align: center;
+    align-items: baseline;
+    .logo {
+        display: inline-block;
+        margin: 0 0 20px 0;
+        color: var(--white-color);
+    }
+    
+    .social__item {
+        background-color: #ffffff1a;
+    }
+
+    .social__sprite {
+        fill: var(--white-color);
+    }
+    
+    @include tablet{
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    }
+
+    @include desktop {
+        text-align: start;
+        .container {
+        justify-content: space-between;
+        display: flex;}
+    }
+    
+}
+
+
+address {
+    font-style: normal;
+}
+
+.footer__adr {
+    @include font(14px, 400, 1.7, 0.03em);
+    color: var(--white-color);
+}
+
+.footer__adr a {
+    color: rgba(255, 255, 255, 0.6);
+    @extend %mail-tel;
+}
+
+
+.footer__adr>li {
+    margin-bottom: 9px;
+    
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+.address,
+.footer__label {
+    color: var(--white-color);
+    margin-bottom: 0;
+ 
+    @include tablet{
+        text-align: center;
+    }
+    @include desktop{
+        text-align: start;
+    }
+}
+
+
+
+.footer__network {
+    display: inline-block;
+    height: 80px;
+    width: 206px;
+    margin-top: 60px;
+    padding-top: 0%;
+
+    @include tablet{
+    margin: 0;
+    }
+    
+    @include desktop {
+    margin-left: 70px;
+    margin-top: 12px;}
+}
+
+.footer__mailing {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+
+    @include desktop {
+    margin-left: 93px;
+    margin-top: 12px;}
+}
+
+.footer__input {
+    
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    width: 100%;
+    margin-top: 20px;
+    height: 50px;
+    padding-left: 16px;
+
+    @include desktop {
+    width: 358px;
+    margin: 20px 12px 0 0;  
+    }
+   
+    color: var(--white-color);
+    font-size: 16px;
+
+    @extend %input;
+  
+    &:focus {
+        @extend %input-focus;
+    }
+    
+    &::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+        
+        @include font(16px, 400, 1.25, 0.03em);
+    }
+}
+
+.footer__field {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+   
+    @include desktop {
+        align-items: flex-end;  
+        flex-wrap: nowrap;
+    }
+    
+}
+
+.footer__btn {
+    @include flex;
+    margin-top: 20px;
+}
+
+.footer__iconSend {
+    margin-left: 10px;
+}

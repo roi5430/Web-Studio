@@ -1,0 +1,24 @@
+%mail-tel {
+    
+    text-decoration: none;
+    cursor: pointer;
+    transition: color $timing-function;
+
+    &:focus,
+    &:hover {
+        color: var(--accent-color);
+    }
+}
+
+%input{
+    background-color: transparent;
+    outline: transparent;
+    border-radius: 4px;
+    transition: border-color $timing-function;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+%input-focus{
+    border-color: var(--accent-color);
+    outline: transparent;
+}

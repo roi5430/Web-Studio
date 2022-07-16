@@ -1,0 +1,13 @@
+.logo {
+    color: #000;
+
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+    margin: 16px 0;
+    @include font(24px, 700, 1.16, 0.03em);
+
+    @include desktop{
+        @include font(26px, 700, 1.2, 0.03em);
+        margin-right: 93px;
+    }
+}

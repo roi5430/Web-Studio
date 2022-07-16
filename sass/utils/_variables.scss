@@ -1,0 +1,21 @@
+/* головний колір #757575 */
+/* другий колір #212121 */
+/* білий #ffffff */
+/* ефект #2196F3 */
+/* чорний #000000 */
+
+$timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+$font-family:'Roboto', sans-serif;
+$font-size: 16px;
+
+
+:root {
+    --primary-text-color: #757575;
+    --title-color: #212121;
+    --accent-color: #2196f3;
+    --white-color: #ffffff;
+    --btn-background-color: #f5f4fa;
+    --typical-margin: 30px;
+    --svg-color: #afb1b8;
+}
+

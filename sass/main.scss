@@ -1,0 +1,31 @@
+@import './utils/variables';
+@import'./utils/breakpoint';
+@import './base/reset';
+@import './utils/mixin';
+@import './utils/placeholder';
+@import './base/hidden';
+
+@import './components/common';
+@import './layout/mob-menu';
+@import './components/logo';
+@import './components/main-btn';
+@import './components/title';
+@import './components/subtitle';
+@import './components/social-sprite';
+
+
+
+@import './layout/hero';
+@import './layout/header';
+@import './layout/features';
+@import './layout/gellary';
+@import './layout/team';
+@import './layout/clients';
+@import './layout/footer';
+@import './layout/modal';
+
+
+
+@import './layout/filters';
+@import './layout/cards';
+

@@ -1,0 +1,45 @@
+.social__list {
+    @include flex;
+    margin-top: 16px;
+}
+
+.social__item {
+    @include flex;
+
+    background-color: var(--white-color);
+    border-radius: 50%;
+    margin-right: 10px;
+    
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+
+
+.social__link {
+    height: 44px;
+    width: 44px;
+    @include flex;
+    border-radius: 50%;
+    cursor: pointer;
+
+    transition: background-color $timing-function;
+    
+    &:hover, &:focus {
+        background-color: var(--accent-color);
+        border-radius: 50%;
+    }
+}
+
+.social__sprite {
+    fill: var(--svg-color);
+    cursor: pointer;
+    transition: fill $timing-function;
+   
+    .social__link:hover &,
+    .social__link:focus & {
+        fill: var(--white-color);
+    }
+}
+

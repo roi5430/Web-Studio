@@ -1,0 +1,39 @@
+/* -------------- Features-------------- */
+.features {
+    @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--typical-margin);
+    // margin-right: calc(-1 * var(--typical-margin));
+    }
+}
+
+.features__item {
+    @include tablet {
+        width: calc((100% - 30px) / 2);}
+    
+    @include desktop {
+    width: calc((100% - 90px) / 4);
+   }
+}
+    
+
+
+.features__trumb {
+    @include flex;
+    height: 120px;
+    background-color: var(--btn-background-color);
+    border-radius: 4px;
+    margin-bottom: var(--typical-margin);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.features__text {
+    margin-bottom: 19px;
+    @include font(14px, 400, 1.7, 0.03em);
+    @include tablet {
+        margin-bottom:0;
+    }
+}

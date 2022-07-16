@@ -1,0 +1,60 @@
+/* -------------Clients--------------- */
+.clients__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    // margin-right: calc(-1 * var(--typical-margin));
+    gap: var(--typical-margin);
+
+    @include desktop {
+        gap: 0;
+    }
+
+}
+
+.client__item { 
+    width: calc((100% - 30px) / 2);
+
+    @include tablet {
+        width: calc((100% - 60px) / 3);
+    }
+    @include desktop {
+        width: calc((100% - 150px) / 6);
+        margin-right: var(--typical-margin);
+        &:last-child {
+         margin-right: 0;
+        }
+    }   
+
+}
+
+
+.client__icon {
+    fill: var(--svg-color);
+    cursor: pointer;
+
+    transition: fill 250ms linear;
+    
+    .client__link:hover &,
+    .client__link:focus & {
+        fill: var(--accent-color);
+    }
+}
+
+.client__link {
+    @include flex;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid var(--svg-color);
+    height: 92px;
+    cursor: pointer;
+
+    transition: border $timing-function;
+
+    &:hover,
+    &:focus {
+        border-radius: 4px;
+        border: 1px solid var(--accent-color);
+    }
+}
+

@@ -1,0 +1,181 @@
+/* --------Modal-------- */
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+
+    transition: opacity $timing-function;
+    opacity: 1;
+    .is-hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform $timing-function;
+   
+
+    background-color: var(--white-color);
+    padding: 40px;
+
+    .backdrop.is-hidden & {
+        transform: scale(0.8) translate(-50%, -50%);
+    }
+    @include mobile{
+        min-width: 450px;
+        min-height: 609px;
+    }
+
+    @include desktop{
+        min-width: 528px;
+        min-height: 581px;
+    }
+}
+
+
+.close {
+    position: absolute;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    top: 8px;
+    right: 8px;
+    cursor: pointer;
+
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: fill $timing-function;
+    
+    &:hover, &:focus{
+        fill: var(--accent-color);
+    }
+}
+
+
+.close-black {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-title {
+    
+    @include font(20px, 700, 1.15, 0.03em);
+    text-align: center;
+    color: var(--title-color);
+    margin-bottom: 12px;
+}
+
+.modal-input {
+    height: 40px;
+    width: 100%;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+   
+    padding-left: 42px;
+    color: var(--primary-text-color);
+    @extend %input;
+    &:focus{
+        @extend %input-focus;}
+}
+
+.modal-btn {
+    display: block;
+    margin: 0 auto;
+}
+
+.modal-label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 4px;
+    @include font(12px, 400, 1.2, 0.01em);
+}
+
+.comment {
+    resize: none;
+    height: 120px;
+    padding: 12px 16px;
+    margin-bottom: 0;
+    &::placeholder {
+        color: rgba(117, 117, 117, 0.5);
+        @include font(14px, 400, 1.14, 0.01em);
+    }
+}
+
+
+.input-wrap {
+    position: relative;
+}
+
+.input-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: fill $timing-function;
+    
+    .modal-input:focus+&{
+        fill: var(--accent-color);
+    }
+}
+
+.check-field {
+    margin: 20px 0 30px 0;
+}
+
+.check-text {
+    @include font(12px, 400, 1.16, 0.03em);
+    @include flex;
+
+    @include desktop{
+        @include font(14px, 400, 1.71, 0.03em);
+    }
+}
+
+.check-text a {
+    color: var(--accent-color);
+    transition: color $timing-function;
+
+    &:hover,
+    &:focus {
+        color: rgb(67, 94, 185);
+    }
+}
+.check-text span {
+    border: 2px solid var(--title-color);
+    height: 15px;
+    width: 16px;
+    border-radius: 2px;
+    margin-right: 7px;
+
+    @include flex;
+    transition: border $timing-function, box-shadow $timing-function;
+    
+    .input-check:focus+& {
+        border: 2px solid var(--accent-color);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .input-check:checked+& {
+        border: none;
+        background-color: var(--accent-color);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+}
+
+.check-icon {
+    fill: transparent;
+    .input-check:checked+.check-text & {
+      fill: var(--white-color);
+    }
+}
+

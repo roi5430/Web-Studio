@@ -1,0 +1,12 @@
+.subtitle {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+
+    color: var(--title-color);
+    @include font(14px, 700, 1.2, 0.03em);
+    text-align: center;
+
+    @media screen and (min-width: $tablet) {
+        text-align: start;     
+    }
+}

@@ -1,0 +1,118 @@
+.menu-btn {
+    height: 40px;
+    width: 40px;
+    background-color: transparent;
+    border: none;
+    margin-right: -5px;
+    margin-left: auto;
+
+    &:hover,
+    &:focus {
+        fill: var(--accent-color);
+    }
+
+    transition: fill $timing-function;
+
+    @include tablet {
+        display: none;
+    }
+}
+
+.menu__modal {
+    position: fixed;
+    z-index: 2;
+    background-color: #ffffff;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    padding: 48px 40px;
+
+    @include tablet {
+        display: none;
+    }
+}
+
+.menu__conteiner {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100vh;
+
+}
+
+.btn-close {
+    position: absolute;
+    top: -38px;
+    right: -25px;
+}
+
+
+.menu-nav__item:not(:last-child) {
+    margin-bottom: 32px;
+
+}
+
+.menu-nav__link {
+    color: var(--title-color);
+    @include font(32px, 500, 1.17, 00.02em);
+
+    @include mobile {
+        font-size: 40px;
+    }
+    &--current{
+        color: var(--accent-color);
+    }
+}
+
+
+.menu-adr__tel {
+    color: var(--accent-color);
+    @include font(27px, 500, 1.25, 00.02em);
+
+    @include mobile {
+        font-size: 34px;
+    }
+}
+
+
+.menu-adr__e-mail {
+    color: var(--primary-text-color);
+    @include font(24px, 500, 1.25, 00.02em);
+}
+
+.menu-social {
+    display: flex;
+    margin-top: 64px;
+}
+
+.menu-social__item {
+    padding: 0 10px;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+
+    &:first-child {
+        padding-left: 0;
+    }
+
+    &:last-child {
+        border-right: none;
+    }
+
+}
+
+.menu-social__link {
+    color: var(--accent-color);
+    @include font(14px, 500, 1.22, 00.02em);
+
+    @include mobile {
+        font-size: 18px;
+    }
+
+    &:focus {
+        color: #203064;
+        box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
+        transition: color $timing-function, box-shadow $timing-function;
+    }
+}

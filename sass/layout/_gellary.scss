@@ -1,0 +1,37 @@
+/* -------------- Gellary---------------- */
+.gallery {
+    padding-top: 0;
+    display: none;
+    
+    @include desktop{
+    display: block;
+    }
+}
+
+.gallery__list {
+    display: flex;
+    position: relative;
+    gap: 30px;
+    li {
+        width: calc((100% - 60px)/3);
+    }
+}
+
+
+.gellery__overlay {
+    position: relative;
+}
+
+.gellery__desc {
+    @include flex;
+    position: absolute;
+    background-color: rgba(47, 48, 58, 0.8);
+    width: 100%;
+    height: 70px;
+    bottom: 0;
+
+    @include font(14px, 700, 1.14, 0.03em);
+    text-transform: uppercase;
+    color: var(--white-color);
+    
+}

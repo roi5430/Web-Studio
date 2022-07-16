@@ -1,0 +1,58 @@
+/*---------------- Hero-------------------- */
+
+.hero {
+    background-color: #2f303a;
+    text-align: center;
+    
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url('../images/Img_hero_mob.jpg');
+        @include retina {
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../images/Img_hero_mob2x.jpg');
+        }
+
+    @include tablet{
+        @include retina {
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../images/Img_hero_tab2x.jpg');}
+
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../images/Img_hero_tab.jpg');
+    }
+    
+    @include desktop{
+        @include retina {
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url('../images/Img_hero2x.jpg');
+            }
+
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../images/Img_hero.jpg');
+        padding: 200px 0;
+
+    }
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero__title {
+    color: var(--white-color);
+    text-transform: uppercase;
+    @include font(26px, 900, 1.6, 0.06em);  
+    max-width: 360px;
+   
+    @media screen and (max-width:480px)  {
+        font-size: 21px;   
+    }
+
+    @include desktop {
+        max-width: 696px;   
+        @include font(44px, 900, 1.36, 0.06em);
+    }
+    
+}
